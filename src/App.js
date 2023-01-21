@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/navbar/Navbar';
+import { FaArrowUp } from 'react-icons/fa'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <Navbar />
+      <main className="main-container" style={{paddingTop: "100vh"}}>
+        <section  className='hero-section' id="hero">Hero section</section>
+        <section id="call-for-paper">Call for Paper</section>
+        <section id="paper-submission">Paper Submission</section>
+        <a className='back-to-top' href="#">
+          <FaArrowUp />
         </a>
-      </header>
+      </main>
     </div>
   );
 }
