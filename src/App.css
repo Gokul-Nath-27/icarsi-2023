@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 :root {
-  --navHeight: 70px; /*You HAVE To Give A Default Fallback Value*/
+  --navHeight: 90px; 
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--navHeight);
+  background-color: #000;
+  color: #fff;
 }
 
 * {
@@ -15,10 +17,7 @@ html {
 }
 
 .App {
-  height: 100vh;
-  width: 100%;
-  background: url("./assets/conference.jpg");
-  background-size: cover;
+
 }
 
 .main-container {}
@@ -27,7 +26,12 @@ section {
   height: 500px;
 }
 
-.hero-section {}
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background: url("./assets/conference.jpg");
+  background-size: cover;
+}
 
 .back-to-top {
   position: fixed;
@@ -41,8 +45,9 @@ section {
   font-size: 1rem;
   border-radius: 50%;
   padding: 1rem;
-  background-color: #9f9e9e;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 2px solid black;
 }
 
 @media screen and (max-width: 768px) {

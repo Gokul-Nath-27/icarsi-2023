@@ -1,9 +1,10 @@
 .footer {
     width: 100%;
-    background-color: #24262b;
-    color: #ffffff;
-    .container {
-      width: 80%;
+    background-color: rgb(25, 25, 25);
+    color: #ffffff
+    ;
+    .container1 {
+      width: 90%;
       margin-inline: auto;
     }
     .flex {
@@ -63,7 +64,6 @@
   
     .gmap_canvas {
       overflow: hidden;
-      // background: none !important;
       width: 100%;
       height: 300px;
     }

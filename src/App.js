@@ -10,12 +10,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <main className="main-container" style={{ paddingTop: "100vh" }}>
-          <section className="hero-section" id="hero">
-            Hero section
-          </section>
+        <main className="main-container">
+          <section className="hero-section" id="hero"></section>
           <section id="call-for-paper">Call for Paper</section>
           <section id="paper-submission">Paper Submission</section>
+          <section id="contact">Contact</section>
         </main>
         <HashLink className="back-to-top" to="#">
           <FaArrowUp />

@@ -34,6 +34,7 @@ const Navbar = () => {
                             <HashLink
                                 to="#"
                                 onClick={() => setMobilenavOpen(!mobnavOpen)}
+                                className="active"
                                 >
                                 Home
                             </HashLink>

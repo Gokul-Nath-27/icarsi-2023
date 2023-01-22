@@ -1,11 +1,13 @@
 .navbar {
   position: fixed;
 }
+
 .navbar-active {
-  background-color: rgba(0, 0, 0, 0.877);
-  color: white;
+  background-color: rgba(0, 0, 0);
+  color: #a0a0a0;
   transition: 0.5s;
 }
+
 .container {
   margin-inline: auto;
   padding: 0 4rem;
@@ -13,18 +15,21 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   width: 33%;
 }
-.nav-elements{
 
-}
+.nav-elements {}
+
 .nav-elements ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
   gap: 2rem;
+  z-index: 10000000;
+
 }
 
 .nav-elements ul li {
@@ -33,13 +38,19 @@
   cursor: pointer;
 }
 
-.nav-elements ul li > * {
+.nav-elements ul li>* {
   font-weight: 600;
   position: relative;
-  color: rgba(255, 255, 255, 0.9);
+  color: #a0a0a0;
   text-decoration: none;
 }
-.nav-elements ul li > *::after {
+
+.nav-elements ul li>*:hover,
+.nav-elements ul li>*.active {
+  color: white;
+}
+
+.nav-elements ul li>*::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -51,8 +62,9 @@
   background: #aaa;
   height: 2px;
 }
-.nav-elements ul li > *:hover:after,
-.nav-elements ul li > *.active:after {
+
+.nav-elements ul li>*:hover:after,
+.nav-elements ul li>*.active::after {
   width: 100%;
   transition: all 1s;
 }
@@ -64,9 +76,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .logo{
+  .logo {
     width: 90%;
   }
+
   .nav-elements ul {
     display: flex;
     flex-direction: column;
@@ -74,30 +87,40 @@
     align-items: flex-start;
     position: fixed;
     top: var(--navHeight);
-    right: -320px;
-    width: 260px;
+    right: -270px;
+    width: 240px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.886);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 40px 6-px rgba(34, 17, 17, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 40px 6px rgba(34, 17, 17, 0.1);
     padding: 10% 0 0 6%;
     transition: 1s;
   }
-  .nav-elements ul.active{
+
+  .nav-elements ul.active {
     right: 0;
   }
-  #mobile{
+
+  .nav-elements ul li>*,
+  .nav-elements ul li>*:hover,
+  .nav-elements ul li>*.active {
+    color: #000;
+  }
+
+  #mobile {
     display: block;
     width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #mobile > *{
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-  .container{
-    padding: 0 1rem 0 0;
+
+  #mobile>* {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .container {
+    padding: .4rem 1rem 0 .8rem;
   }
 }

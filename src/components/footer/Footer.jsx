@@ -1,10 +1,7 @@
 import React from "react";
 import "./footer.scss";
-import styled from "styled-components";
 import logo from "../../assets/logo.webp";
-import Avatar from "@mui/joy/Avatar";
 import { Link } from "react-router-dom";
-import Chip from "@mui/joy/Chip";
 import {
   FaFacebook,
   FaTwitter,
@@ -12,67 +9,14 @@ import {
   FaInstagram,
   FaPinterest,
 } from "react-icons/fa";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Card } from "@mui/material";
+
 const Footer = () => {
-  const [views, setViews] = useState(localStorage.getItem("value"));
 
-  useEffect(() => {
-    setViews(parseInt(views));
-  }, []);
-
-  const LogoHead = styled.div`
-    display: flex;
-    width: fit-content;
-    gap: 0.5rem;
-    align-items: center;
-    @media screen and (max-width: 600px) {
-      width: 80%;
-      margin-left: 3rem;
-      justify-content: flex-start;
-    }
-  `;
-
-  const DLogo = styled.img`
-    width: 20%;
-    @media screen and (max-width: 600px) {
-    }
-  `;
-  const EventLogo = styled.div`
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width: 600px) {
-    }
-  `;
-  const DresteinLetter = styled.p`
-    font-size: 2.2vw;
-    font-family: "Azonix", sans-serif;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    @media screen and (max-width: 600px) {
-      font-size: 7vw;
-    }
-  `;
-  const Year = styled.p`
-    font-size: 1vw;
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    height: auto;
-    letter-spacing: 0.8em;
-    @media screen and (max-width: 600px) {
-      font-size: 3vw;
-    }
-  `;
   return (
     <div className="footer">
-      <div className="flex container">
+      <div className="flex container1">
         <div className="block">
-          <LogoHead>
-            
-          </LogoHead>
+            <img style={{ width: "100%" }} src={logo} alt="logo" />
           <div className="desc">
             13<sup>th</sup> National level inter collegiate technical and
             management fest
@@ -80,106 +24,24 @@ const Footer = () => {
         </div>
         <div className="block">
           <h4 className="heading">CO-ORDINATORS</h4>
-
-          <Chip
-            size="lg"
-            style={{ backgroundColor: "transparent", margin: "20px 0 " }}
-            startDecorator={
-              <Avatar
-                size="lg"
-                sx={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-                src="PeopleAssets/co1.webp"
-              />
-            }
-          >
-            Dr. K. Suresh Kumar
-          </Chip>
-          <Chip
-            size="lg"
-            style={{ backgroundColor: "transparent" }}
-            startDecorator={
-              <Avatar
-                size="sm"
-                sx={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-                src="PeopleAssets/co2.webp"
-              />
-            }
-          >
-            Dr. N. Raja Rajeshwari
-          </Chip>
-
-          <h4
-            className="heading"
-            style={{ marginTop: "2rem", marginBottom: "1rem" }}
-          >
-            WEBSITE CO-ORDINATORS
-          </h4>
-          <a>
-            <Chip
-              size="md"
-              style={{ backgroundColor: "transparent" }}
-              startDecorator={
-                <Avatar size="sm" src={`/static/images/avatar/1.jpg`} />
-              }
-            >
-          Bharath S
-            </Chip>
-          </a>
-          <Chip
-            size="md"
-            style={{ backgroundColor: "transparent" }}
-            startDecorator={
-              <Avatar size="sm" src={`/static/images/avatar/1.jpg`} />
-            }
-            >
-            Shanu S
-          </Chip>
-          <Chip
-            size="md"
-            style={{ backgroundColor: "transparent" }}
-            startDecorator={
-              <Avatar size="sm" src={`/static/images/avatar/1.jpg`} />
-            }
-          >
-            Gokul Nath A
-          </Chip>
-          <Chip
-            size="md"
-            style={{ backgroundColor: "transparent" }}
-            startDecorator={
-              <Avatar size="sm" src={`/static/images/avatar/1.jpg`} />
-            }
-          >
-            Sugan
-          </Chip>
         </div>
         <div className="block">
           <h4 className="heading">USEFUL LINKS</h4>
           <a href="#" className="links">
             Home
           </a>
-          <a href="#Departments" className="links">
-            Departments
+          <a href="#call-for-paper" className="links">
+            Call For Paper
           </a>
-          <Link to="/form" className="links">
-            Register
+          <Link to="/#paper-submission" className="links">
+            Paper Submission
           </Link>
-          <Link to="/form" className="links">
-            Events
+          <Link to="/#contact" className="links">
+            Contact
           </Link>
-          {/* <a href="#" className="links">
+          <a href="#" className="links">
             Privacy Policy
-          </a> */}
+          </a>
           <h4
             className="heading"
             style={{ marginTop: "2rem", marginBottom: "1rem" }}
@@ -230,10 +92,6 @@ const Footer = () => {
                 }}
                 class="gmap_iframe"
                 width="100%"
-                frameBorder="0"
-                scrolling="no"
-                marginHeight="0"
-                marginWidth="0"
                 src="https://maps.google.com/maps?width=250&amp;height=250&amp;hl=en&amp;q=Saveetha engineering college&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
             </div>
@@ -241,7 +99,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        Copyright © Saveetha Engineering College, Powered by ICARS.
+        Copyright © Saveetha Engineering College, Powered by ICRACS 2023.
       </div>
     </div>
   );
