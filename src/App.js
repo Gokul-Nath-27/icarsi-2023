@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import { FaArrowUp } from "react-icons/fa";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import Footer from "./components/footer/Footer";
 function App() {
   
   return (
@@ -19,6 +20,7 @@ function App() {
         <HashLink className="back-to-top" to="#">
           <FaArrowUp />
         </HashLink>
+        <Footer />
       </div>
     </BrowserRouter>
   );
