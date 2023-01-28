@@ -1,0 +1,42 @@
+
+
+@media only screen and (max-width:730px){
+	.imp-dates{
+		width:100%;	
+	}
+	
+	.imp-dates h3.date, .imp-dates h3.submission-of{
+		width:100% !Important;	
+		text-align:center;
+	}
+	
+	.imp-dates h3.submission-of{
+		margin-top:10px;
+	}
+	
+	.imp-dates .bullet-design{
+		display:none;	
+	}
+	
+	.imp-left{
+		left:-150px;		
+	}
+	
+	.imp-dates .row:hover h3.date, .imp-dates .row:hover h3.submission-of{
+		transform:translateX(0);	
+	}
+	.imp-dates h3.date{
+		color:#00a9b4;	
+	}
+	.heading h2{
+		font-size:25px;	
+	}
+	.heading h3{
+		font-size:20px;	
+	}
+	
+	.register-parallax h2{
+		font-size:23px;	
+	}
+}
+

@@ -24,7 +24,7 @@ const Navbar = () => {
     window.addEventListener('resize', setNavHeight)
     return (
         <nav id="navbar" className={colorChange ? "navbar navbar-active" : "navbar"}>
-            <div className="container">
+            <div className="container-nav">
                 <div className="logo">
                     <img style={{ width: "100%" }} src={logo} alt="logo" />
                 </div>

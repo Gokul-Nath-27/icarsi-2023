@@ -3,11 +3,9 @@
   --navHeight: 90px; 
 }
 
-html {
+html{
   scroll-behavior: smooth;
   scroll-padding-top: var(--navHeight);
-  background-color: #000;
-  color: #fff;
 }
 
 * {
@@ -15,12 +13,6 @@ html {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
-
-.App {
-
-}
-
-.main-container {}
 
 section {
   height: 500px;
@@ -48,6 +40,10 @@ section {
   background-color: #fff;
   color: #000;
   box-shadow: 2px solid black;
+}
+#navbar
+{
+  z-index: 99;
 }
 
 @media screen and (max-width: 768px) {
